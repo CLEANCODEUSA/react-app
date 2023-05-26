@@ -14,9 +14,9 @@ function Main() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={ContentRegion} />
-        <Route path='/' element={About} />
-        <Route path='/' element={Terms} />
+        <Route path='/' element={<ContentRegion />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/terms' element={<Terms />} />
       </Routes>
       <Footer />
     </BrowserRouter>
