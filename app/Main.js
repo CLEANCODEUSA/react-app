@@ -1,18 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Custom components
 import Header from './components/Header'
 import ContentRegion from './components/ContentRegion'
 import Footer from './components/Footer'
+import About from './components/About'
+import Terms from './components/Terms'
 
 function Main() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <ContentRegion />
+      <Routes>
+        <Route path='/' element={ContentRegion} />
+        <Route path='/' element={About} />
+        <Route path='/' element={Terms} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 
